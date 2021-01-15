@@ -22,7 +22,7 @@
     </build>
     <modules>
         <module>simple-bean-container</module>
-        <module>bean-definition-and-bean-definition-registry</module>
+        <module>bean-definition</module>
     </modules>
     <dependencies>
         <dependency>
