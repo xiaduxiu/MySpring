@@ -23,6 +23,7 @@
     <modules>
         <module>simple-bean-container</module>
         <module>bean-definition</module>
+        <module>bean-instantiation-strategy</module>
     </modules>
     <dependencies>
         <dependency>
