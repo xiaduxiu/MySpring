@@ -27,6 +27,7 @@
         <module>populate-bean</module>
         <module>xml-define-bean</module>
         <module>post-processor</module>
+        <module>application-context</module>
     </modules>
     <dependencies>
         <dependency>
