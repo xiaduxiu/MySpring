@@ -28,6 +28,10 @@
         <module>xml-define-bean</module>
         <module>post-processor</module>
         <module>application-context</module>
+        <module>aware</module>
+        <module>prototype-bean</module>
+        <module>factory-bean</module>
+        <module>event-and-event-listener</module>
     </modules>
     <dependencies>
         <dependency>
