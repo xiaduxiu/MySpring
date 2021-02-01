@@ -9,7 +9,7 @@ import com.xcr.spring.context.ApplicationEvent;
  * @Version: v1.0
  */
 public abstract class ApplicationContextEvent extends ApplicationEvent {
-    public ApplicationContextEvent(Object source) {
+    public ApplicationContextEvent(ApplicationContext source) {
         super(source);
     }
 

@@ -13,6 +13,6 @@ public class ContextClosedEventListener implements ApplicationListener<ContextCl
 
     @Override
     public void onApplicationEvent(ContextClosedEvent event) {
-        System.out.println(this.getClass().getSimpleName());
+        System.out.println(this.getClass().getName());
     }
 }

@@ -29,7 +29,7 @@ public abstract class AbstractApplicationEventMulticaster implements Application
 
     @Override
     public void addApplicationListener(ApplicationListener<?> listener) {
-        this.applicationListeners.add((ApplicationListener<ApplicationEvent>) listener);
+        applicationListeners.add((ApplicationListener<ApplicationEvent>) listener);
     }
 
     @Override

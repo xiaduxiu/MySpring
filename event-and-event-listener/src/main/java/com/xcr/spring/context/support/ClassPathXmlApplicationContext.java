@@ -1,7 +1,5 @@
 package com.xcr.spring.context.support;
 
-import com.xcr.spring.context.ApplicationEvent;
-
 /**
  * @Author: xia
  * @Date: 2021/1/28 18:02
@@ -23,10 +21,5 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
     @Override
     protected String[] getConfigLocations() {
         return this.configLocations;
-    }
-
-    @Override
-    public void publishEvent(ApplicationEvent event) {
-
     }
 }

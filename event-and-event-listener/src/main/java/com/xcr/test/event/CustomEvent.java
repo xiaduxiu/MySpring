@@ -1,7 +1,7 @@
 package com.xcr.test.event;
 
+import com.xcr.spring.context.ApplicationContext;
 import com.xcr.spring.context.ApplicationEvent;
-import com.xcr.spring.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @Author: xia
@@ -9,7 +9,7 @@ import com.xcr.spring.context.support.ClassPathXmlApplicationContext;
  * @Version: v1.0
  */
 public class CustomEvent extends ApplicationEvent {
-    public CustomEvent(ClassPathXmlApplicationContext source) {
+    public CustomEvent(ApplicationContext source) {
         super(source);
     }
 }

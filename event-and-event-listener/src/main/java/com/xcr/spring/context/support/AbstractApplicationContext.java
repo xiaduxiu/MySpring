@@ -7,6 +7,7 @@ import com.xcr.spring.context.ApplicationEvent;
 import com.xcr.spring.context.ApplicationListener;
 import com.xcr.spring.context.ConfigurableApplicationContext;
 import com.xcr.spring.context.event.ApplicationEventMulticaster;
+import com.xcr.spring.context.event.ContextClosedEvent;
 import com.xcr.spring.context.event.ContextRefreshedEvent;
 import com.xcr.spring.context.event.SimpleApplicationEventMulticaster;
 import com.xcr.spring.core.io.DefaultResourceLoader;
@@ -126,6 +127,11 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader i
     }
 
     private void doClose() {
+        try {
+            publishEvent(new ContextClosedEvent(this));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         destroyBeans();
     }
 

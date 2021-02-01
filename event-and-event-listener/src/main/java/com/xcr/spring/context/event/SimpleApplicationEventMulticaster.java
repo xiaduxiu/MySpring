@@ -29,20 +29,14 @@ public class SimpleApplicationEventMulticaster extends AbstractApplicationEventM
 
     protected boolean supportsEvent(ApplicationListener<ApplicationEvent> applicationListener, ApplicationEvent event) throws Exception {
         Class<?> eventClassName;
-        Type[] genericInterfaces = applicationListener.getClass().getGenericInterfaces();
-        for (Type type: genericInterfaces) {
-            if (type instanceof ParameterizedType) {
-                Type actualTypeArgument = ((ParameterizedType) type).getActualTypeArguments()[0];
-                String typeName = actualTypeArgument.getTypeName();
-                try {
-                    eventClassName = Class.forName(typeName);
-                } catch (ClassNotFoundException e) {
-                    throw new Exception("wrong event class name: " + typeName);
-                }
-                return eventClassName.isAssignableFrom(event.getClass());
-            }
+        Type type = applicationListener.getClass().getGenericInterfaces()[0];
+        Type actualTypeArgument = ((ParameterizedType) type).getActualTypeArguments()[0];
+        String typeName = actualTypeArgument.getTypeName();
+        try {
+            eventClassName = Class.forName(typeName);
+        } catch (ClassNotFoundException e) {
+            throw new Exception("wrong event class name: " + typeName);
         }
-        return false;
+        return eventClassName.isAssignableFrom(event.getClass());
     }
-
 }
