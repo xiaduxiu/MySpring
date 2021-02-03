@@ -32,6 +32,8 @@
         <module>prototype-bean</module>
         <module>factory-bean</module>
         <module>event-and-event-listener</module>
+        <module>pointcut-expression</module>
+        <module>jdk-dynamic-proxy</module>
     </modules>
     <dependencies>
         <dependency>
